@@ -1,0 +1,131 @@
+[
+    {
+        "title": "Redmi A1",
+        "description": "Xiaomi",
+        "price": "130000",
+        "img": "Sin imagen",
+        "code": "abc123",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 1
+    },
+
+    {
+        "title": "Y21s",
+        "description": "Vivo",
+        "price": "140000",
+        "img": "Sin imagen",
+        "code": "abc124",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 2
+    },
+
+    {
+        "title": "C35",
+        "description": "Realme",
+        "price": "180000",
+        "img": "Sin imagen",
+        "code": "abc125",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 3
+    },
+
+    {
+        "title": "G11",
+        "description": "Nokia",
+        "price": "190000",
+        "img": "Sin imagen",
+        "code": "abc126",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 4
+    },
+
+    {
+        "title": "GT Neo 3T",
+        "description": "Realme",
+        "price": "200000",
+        "img": "Sin imagen",
+        "code": "abc127",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 5
+    },
+
+    {
+        "title": "Pixel 7a",
+        "description": "Google",
+        "price": "720000",
+        "img": "Sin imagen",
+        "code": "abc128",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 6
+    },
+
+    {
+        "title": "Galaxy A54",
+        "description": "Samsung",
+        "price": "600000",
+        "img": "Sin imagen",
+        "code": "abc129",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 7
+    },
+
+    {
+        "title": "Galaxy S23",
+        "description": "Samsung",
+        "price": "1500000",
+        "img": "Sin imagen",
+        "code": "abc130",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 8
+    },
+
+    {
+        "title": "13 Pro",
+        "description": "Xiaomi",
+        "price": "900000",
+        "img": "Sin imagen",
+        "code": "abc131",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 9
+    },
+
+    {
+        "title": "P60 Pro",
+        "description": "Huawei",
+        "price": "1200000",
+        "img": "Sin imagen",
+        "code": "abc132",
+        "stock": "10",
+        "category": "celulares",
+        "status": true,
+        "thumbnails": [],
+        "id": 10
+    }
+]
