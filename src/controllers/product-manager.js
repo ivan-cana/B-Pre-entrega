@@ -35,24 +35,6 @@ class ProductManager {
         await this.guardarArchivo(this.products);
     }
 
-    async getProducts(){
-        await this.leerArchivo();
-    }
-
-    async getProductsById(id){
-        try {
-            const arrayProductos = await this.leerArchivo();
-            const buscado = arrayProductos.find(item => item.id === id);
-            if(buscado){
-                return buscado;
-            } else {
-                console.log("El producto no existe");
-            }
-        } catch (error) {
-            console.log("Error al buscar el producto", error);
-        }        
-    }
-
     async leerArchivo(){
         try {
             const respuesta = await fs.readFile(this.path, "utf-8");
@@ -69,6 +51,24 @@ class ProductManager {
         } catch (error) {
             console.log("Error al guardar", error)
         }
+    }
+
+    async getProducts(){
+        await this.leerArchivo();
+    }
+
+    async getProductsById(id){
+        try {
+            const arrayProductos = await this.leerArchivo();
+            const buscado = arrayProductos.find(item => item.id === id);
+            if(buscado){
+                return buscado;
+            } else {
+                console.log("El producto no existe");
+            }
+        } catch (error) {
+            console.log("Error al buscar el producto", error);
+        }        
     }
 
     async updateProduct(id, campo, nuevoContenido){
