@@ -55,6 +55,7 @@ class ProductManager {
 
     async getProducts(){
         await this.leerArchivo();
+        return await this.leerArchivo();
     }
 
     async getProductsById(id){
