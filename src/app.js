@@ -4,6 +4,7 @@ const PUERTO = 8080;
 const exphbs = require("express-handlebars");
 const viewsRouter = require("./routes/views.router.js");
 const socket = require("socket.io");
+require("./database.js");
 
 
 app.engine("handlebars", exphbs.engine());

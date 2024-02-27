@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const CartManager = require("../controllers/cart-manager.js");
-const cartManager = new CartManager("./src/models/carts.json");
+const CartManager = require("../controllers/cart-manager-db.js");
+const cartManager = new CartManager();
 
 carts = [];
 
@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/:cid", async (req, res) => {
-    const cartId = parseInt(req.params.cid);
+    const cartId = req.params.cid;
 
     try {
         const carrito = await cartManager.getCartsById(cartId);
@@ -27,11 +27,25 @@ router.get("/:cid", async (req, res) => {
     }
 })
 
+router.post("/:cid/product/:pid", async(req,res) => {
+    const cartId = req.params.cid;
+    const productId = req.params.pid;
+    const quantity = req.body.quantity || 1;
+
+    try {
+        const actualizarCarrito = await cartManager.agregarProductoAlCarrito(cartId, productId, quantity);
+        res.json(actualizarCarrito.products);
+    } catch (error) {
+        console.error("Error al agregar producto al carrito", error);
+        res.status(500).json({ error: "Error interno del servidor" });
+    }
+})
+
 router.put("/api/products/:pid", async (req, res) => {
     let id = req.params.pid;
 
     try {
-        const cambio = await productManager.updateProduct(parseInt(id));
+        const cambio = await productManager.updateProduct(id);
         if(!cambio){
             res.json({
                 error: "No se pudo actualizar el producto"
